@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Open Sans';
+}
+
+header {
+  font-size: 16px;
+  right: 1em;
+  padding-top: 1em;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% -2em);
+  background: white;
+  font-weight: 300;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  padding: .5em;
+}
+
+section.hero {
+  background: url("../images/brickbg.jpg") no-repeat;
+  background-size: cover;
+}
+
+section.hero .thehero {
+  background-color: transparent;
+  padding-top: 54px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section {
+  padding: 3em;
+}
+
+.wrapper section h1, .wrapper section h2, .wrapper section .our-work {
+  padding: 1em 0 1em 0;
+  margin: 0;
+}
+
+.wrapper section p {
+  font-weight: 300;
+}
+
+.wrapper section .our-work {
+  display: inline-block;
+  margin-top: 2em;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  background: url("../images/arrow.png") no-repeat;
+  background-size: 6px;
+  background-position: 0 20px;
+  padding-left: 1em;
+}
+
+.wrapper section .clipper {
+  overflow: hidden;
+}
+
+.wrapper section.hero {
+  padding: 0;
+}
+
+.wrapper section.hero .thehero {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.wrapper section.idea {
+  background-color: black;
+  color: white;
+}
+
+.wrapper section.idea .contactwrap {
+  width: 100%;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.wrapper section.idea .contactwrap .contact-us {
+  width: 100%;
+  margin-top: 2em;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 1em 2em 1em 2em;
+}
+
+@media only screen and (max-width: 1020px) {
+  header {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  header {
+    background: none;
+    width: calc(100% -2em);
+    position: static;
+    text-align: right;
+    position: absolute;
+  }
+  section.hero .thehero {
+    padding-top: 0;
+  }
+  .wrapper {
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    -ms-grid-rows: 60% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: "hero intro" "hero idea";
+    height: 100vh;
+  }
+  .wrapper section {
+    padding: 1em;
+    line-height: 1.6;
+  }
+  .wrapper section p {
+    margin: 0;
+    font-size: 18;
+  }
+  .wrapper .intro {
+    padding: 3em;
+  }
+  section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: hero;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
